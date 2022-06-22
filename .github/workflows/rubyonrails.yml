@@ -45,3 +45,5 @@ jobs:
           bundler-cache: true
       - name: Run RuboCop
         run: bundle exec rubocop --parallel
+      - name: Run HAML-Lint
+        run: bundle exec haml-lint --parallel
