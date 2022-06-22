@@ -6,7 +6,7 @@ RSpec.describe 'Articles', type: :system do
       create(:article, title: 'Hello world!')
 
       visit articles_path
-      expect(page).to have_content 'Hello world!'
+      expect(page).to have_content 'Hello world!!!'
     end
   end
 
