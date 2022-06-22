@@ -29,6 +29,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+          cache: 'yarn'
       - name: Set up database schema
         run: bin/rails db:schema:load
       - name: Run RSpec
@@ -46,4 +47,4 @@ jobs:
       - name: Run RuboCop
         run: bundle exec rubocop --parallel
       - name: Run HAML-Lint
-        run: bundle exec haml-lint --parallel
+        run: bundle exec haml-lint --parallel app/views
