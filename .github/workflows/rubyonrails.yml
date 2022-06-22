@@ -30,6 +30,10 @@ jobs:
         with:
           node-version: 16
           cache: 'yarn'
+      - name: Build assets
+        run: |
+          yarn build
+          yarn build:css
       - name: Set up database schema
         run: bin/rails db:schema:load
       - name: Run RSpec
