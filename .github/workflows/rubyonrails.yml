@@ -32,8 +32,8 @@ jobs:
           cache: 'yarn'
       - name: Build assets
         run: |
-          yarn build
-          yarn build:css
+          bin/rails javascript:build
+          bin/rails css:build
       - name: Set up database schema
         run: bin/rails db:schema:load
       - name: Run RSpec
