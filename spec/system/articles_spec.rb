@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Articles', type: :system do
   describe '#index' do
-    it 'shows articles' do
+    it "shows articles" do
       create(:article, title: 'Hello world!')
 
       visit articles_path
