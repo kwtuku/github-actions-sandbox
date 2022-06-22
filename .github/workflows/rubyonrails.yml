@@ -45,11 +45,13 @@ jobs:
         with:
           name: screenshots
           path: tmp/capybara
+        if: failure()
       - name: Archive code coverage results
         uses: actions/upload-artifact@v3
         with:
           name: code-coverage-report
           path: coverage
+        if: always()
 
   lint:
     runs-on: ubuntu-latest
