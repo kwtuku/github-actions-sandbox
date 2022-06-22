@@ -34,8 +34,8 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build assets
         run: |
-          yarn:build
-          yarn:build:css
+          yarn build
+          yarn build:css
       - name: Set up database schema
         run: bin/rails db:schema:load
       - name: Run RSpec
@@ -64,4 +64,4 @@ jobs:
       - name: Run ESLint
         run: yarn run eslint
       - name: Run Prettier
-        run: yarn run prettier --check
+        run: yarn run prettier --check .
