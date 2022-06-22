@@ -1,14 +1,16 @@
 name: 'Ruby on Rails CI'
+
 on:
   push:
   pull_request:
     branches: ['main']
+
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     services:
       postgres:
-        image: postgres:11-alpine
+        image: postgres:14-alpine
         ports:
           - '5432:5432'
         env:
@@ -54,7 +56,7 @@ jobs:
         if: always()
 
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
