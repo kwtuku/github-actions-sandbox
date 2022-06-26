@@ -16,7 +16,7 @@ RSpec.describe 'Articles', type: :system do
       fill_in 'article_title', with: 'Hello rails!'
       expect do
         click_button 'Save'
-        expect(page).to have_content '記事を作成しましたあ。'
+        expect(page).to have_content '記事を作成しました😀'
       end.to change(Article, :count).by(1)
       expect(page).to have_current_path article_path(Article.last)
       expect(page).to have_content 'Hello rails!'
