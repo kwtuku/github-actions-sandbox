@@ -21,6 +21,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: Install fonts-noto
+        run: |
+          sudo apt update
+          sudo apt install fonts-noto
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@v1
         with:
