@@ -79,11 +79,11 @@ jobs:
       - name: Run RuboCop
         run: bundle exec rubocop --parallel
       - name: Run HAML-Lint
-        run: bundle exec haml-lint --parallel
+        run: bundle exec haml-lint --parallel app/views
         if: always()
       - name: Run ESLint
-        run: yarn run eslint .
+        run: yarn run eslint app/javascript
         if: always()
       - name: Run Prettier
-        run: yarn run prettier --check .
+        run: yarn run prettier --check app/javascript
         if: always()
