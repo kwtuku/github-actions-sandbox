@@ -57,7 +57,8 @@ jobs:
           name: code-coverage-report
           path: coverage
         if: always()
-      - uses: k1LoW/octocov-action@v0
+      - name: Run octocov
+        uses: k1LoW/octocov-action@v0
 
   lint:
     runs-on: ubuntu-20.04
