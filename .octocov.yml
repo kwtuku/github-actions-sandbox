@@ -1,4 +1,5 @@
 comment:
+coverage:
   badge:
     path: docs/coverage.svg
 diff:
