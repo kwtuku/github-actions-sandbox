@@ -1,10 +1,8 @@
 codeToTestRatio:
   code:
-    - '**/*.rb'
-    - '!spec/**/*.rb'
-    - '!vendor/**/*.rb'
+    - app/**/*.rb
   test:
-    - 'spec/**/*.rb'
+    - spec/**/*.rb
 comment:
 coverage:
   badge:
