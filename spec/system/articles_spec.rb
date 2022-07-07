@@ -10,29 +10,29 @@ RSpec.describe 'Articles', type: :system do
     end
   end
 
-  # describe '#new #create' do
-  #   it 'creates an article' do
-  #     visit new_article_path
-  #     fill_in 'article_title', with: 'Hello rails!'
-  #     expect do
-  #       click_button 'Save'
-  #       expect(page).to have_content '記事を作成しました😀'
-  #     end.to change(Article, :count).by(1)
-  #     expect(page).to have_current_path article_path(Article.last)
-  #     expect(page).to have_content 'Hello rails!'
-  #   end
+  describe '#new #create' do
+    it 'creates an article' do
+      visit new_article_path
+      fill_in 'article_title', with: 'Hello rails!'
+      expect do
+        click_button 'Save'
+        expect(page).to have_content '記事を作成しました😀'
+      end.to change(Article, :count).by(1)
+      expect(page).to have_current_path article_path(Article.last)
+      expect(page).to have_content 'Hello rails!'
+    end
 
-  #   context 'with no title' do
-  #     it 'dose not create an article' do
-  #       visit new_article_path
-  #       expect do
-  #         click_button 'Save'
-  #         expect(page).to have_content '1 error prohibited this article from being saved:'
-  #       end.not_to change(Article, :count)
-  #       expect(page).to have_content "Title can't be blank"
-  #     end
-  #   end
-  # end
+    context 'with no title' do
+      it 'dose not create an article' do
+        visit new_article_path
+        expect do
+          click_button 'Save'
+          expect(page).to have_content '1 error prohibited this article from being saved:'
+        end.not_to change(Article, :count)
+        expect(page).to have_content "Title can't be blank"
+      end
+    end
+  end
 
   describe '#edit #update' do
     let(:article) { create(:article, title: 'Hello ruby!') }
