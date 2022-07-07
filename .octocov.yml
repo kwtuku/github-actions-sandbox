@@ -4,9 +4,6 @@ codeToTestRatio:
   test:
     - spec/**/*.rb
 comment:
-coverage:
-  badge:
-    path: docs/coverage.svg
 diff:
   datastores:
     - artifact://${GITHUB_REPOSITORY}
