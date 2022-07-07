@@ -1,8 +1,8 @@
 codeToTestRatio:
   code:
     - '**/*.rb'
-    - '!spec/**'
-    - '!vendor/**'
+    - '!spec/**/*.rb'
+    - '!vendor/**/*.rb'
   test:
     - 'spec/**/*.rb'
 comment:
