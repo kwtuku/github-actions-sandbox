@@ -1,4 +1,4 @@
 comment:
-diff:
+report:
   datastores:
     - artifact://${GITHUB_REPOSITORY}
